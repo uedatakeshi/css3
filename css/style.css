@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+}
+.wrapper {
+    width: 970px;
+    margin: 30px auto 40px;
+}
+.main {
+    display: block;/* ie対策とのこと */
+    float: left;
+    width: 660px;
+}
+.sidemenu {
+    float: right;
+    width: 275px;/ * mainとsidemenu間のマージンの指定はない */
+}
+.footer {
+    width: 100%;
+}
+.clearfix::after {/* after擬似要素指定したmainの中の最後に要素を追加する*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.header, .main, .sidemenu, .footer {
+    border: 1px solid #aaa;
+    background-color: #ccc
+}
+.header, .footer {
+    height: 100px;
+}
+.main, .sidemenu {
+    height: 500px;
+}
+
+
