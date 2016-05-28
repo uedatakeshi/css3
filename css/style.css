@@ -45,8 +45,8 @@ a:link, a.visited, a.hover, a:active {
     margin: 0 10px;/* 左右隣り合ったマージンが相殺されていない気がする?*/
 }
 .global-nav .nav-item a {
-    display: inline-block;
-    width: 100%;
+    display: inline-block;/* 親となぜ同じ指定をしなければいけないのか？*/
+    width: 100px;/* ここでサイズ指定するのも違和感あるが＞なぜ親の方でしないのk？ */
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -54,7 +54,14 @@ a:link, a.visited, a.hover, a:active {
     color: #666;
     font-size: 1.3rem;
     letter-spacing: 1px;
+    transition: 0.15s;
 }
+.global-nav .nav-item.active a,
+.global-nav .nav-item a:hover {
+    background-color: #d03c56;
+    color: #fff;
+}
+
 .wrapper {
     width: 970px;
     margin: 30px auto 40px;
