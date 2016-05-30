@@ -90,13 +90,49 @@ a:link, a.visited, a.hover, a:active {
     height: 100%;
 }
 .hot-topic .content {
+    position: relative;/*これがないと日付がページの上から６０へ*/
     float: left;
     width: 50%;
     height: 100%;
     padding: 105px 25px 0;
     background-color: #2d3d54;
+    line-height: 1.6;
 }
-
+.hot-topic .title {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2.0rem;
+}
+.hot-topic .desc {
+    color: #ddc;
+}
+.hot-topic .date {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 140px;
+    padding: 4px;
+    background-color: #fff;
+    color: #2d3d54;
+    text-align: center;/* 幅140pxの中で中央揃えということ */
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+.heading {
+    padding: 10px 12px;
+    background: url('../images/bg-slash.gif');
+    letter-spacing: 1px;
+    font-size: 1.6rem;/*高さは単純にフォントサイズ+paddingで決めている */
+}
+.scroll-list {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
 .sidemenu {
     float: right;
     width: 275px;/ * mainとsidemenu間のマージンの指定はない */
